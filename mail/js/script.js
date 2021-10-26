@@ -1,9 +1,20 @@
 const contain = document.getElementById("container");
 const mail = ["esse@gmail.com" , "boh@gmail.com" , "mammamia@gmail.com"];
-let ok = 0
+let ok = 0;
 
-let verification = parseInt(prompt("Inserisci qui la tua mail"));
+let verification = prompt("Inserisci qui la tua mail");
+let trovato = false;
 
-if (verification == mail){
-    contain.innerHTML = `la sua mail è corretta! Complimentoni!`
+for (i = 0; i < mail.length; i++) {
+    if (verification == mail[i]) {
+        trovato = true;
+    }
+}
+
+if (trovato == true) {
+    // stiampiano trovato
+    contain.innerHTML = "mail corretta, bravo!"
+} else {
+    // stampiano non trovato
+    contain.innerHTML = "ops, non sei invitato :("
 }
