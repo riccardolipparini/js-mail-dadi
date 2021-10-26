@@ -1,6 +1,5 @@
 const contain = document.getElementById("container");
 const mail = ["esse@gmail.com" , "boh@gmail.com" , "mammamia@gmail.com"];
-let ok = 0;
 
 let verification = prompt("Inserisci qui la tua mail");
 let trovato = false;
